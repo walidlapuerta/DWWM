@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/5/cerulean/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body class="bg-warning text-center p-2 m-2">
+   <div class="container-fluid bg-success p-2 m-2">
+
+    <h1 class="text-center text-info">Calcul IMC</h1>
+
+    <div class="text-center text-info p-2 m-2 fs-5 ">
+        <label for=""> Saisir votre poids : </label>
+        <input type="number" id="poids"/>
+        <label for=""> Saisir votre taille en centimètres : </label>
+        <input type="number" id="taille"/>
+        <div class="text-center p-2 m-2">
+            <button class="btnImc btn-primary p-2 m-2">Valider</button>
+            <div id="resultatImc"></div>
+            <div id="message" class="p-2 m-2"></div>
+
+          </div>
+    </div>
+    
+    <script>
+    
+        const inputPoids = document.querySelector("#poids");
+        const inputTaille = document.querySelector("#taille");
+    
+        const btnImc = document.querySelector(".btnImc");
+        const divResultatImc = document.querySelector("#resultatImc");
+        const divMessage = document.querySelector("#message");
+
+    
+        btnImc.addEventListener("click",function(){
+    
+        function calculImc(){
+    
+
+        const imc = 10000 * (inputPoids.value / (inputTaille.value * inputTaille.value));
+        
+       
+        divResultatImc.innerHTML = "Votre IMC est de " +  Math.round(imc*100)/100;
+
+        
+        if(imc<=18.5){
+
+            divMessage.innerHTML =  "T'es trop maigre chakal faut que tu graille." ;}
+
+
+        else if(imc>18.5 && imc<=25){
+
+            divMessage.innerHTML =  "T'y es un monstre le sang, t'as la santé et tant que t'as la santé c'est le plus important, c'est l'essentiel, et ça c'est le principal !" ;
+        }
+        else if(imc>25 && imc<=30){
+            divMessage.innerHTML = "Oula tu commence à avoir une petite bidoche, t'es un gourmand toi hein, tu refuse jamais des schokobons pas vrai ?" ;
+        }
+        else if(imc>30 && imc<=35){
+
+            divMessage.innerHTML = "Vas-y mollo avec les tacos mon reuf tu risque d'avoir des soucis, cours un peu ça va te faire du bien."
+
+        }
+        else if(imc>35 && imc<=40){
+            divMessage.innerHTML = "T'es en obésité sévère, arrête de faire le zignouaw, là tu mets ta santé en jeu"
+        }
+        else if(imc>40){
+            divMessage.innerHTML = "Je vais rien dire sinon je vais me faire traiter de grossophobe..."
+        }
+
+       
+    }
+    
+    console.log(calculImc());
+}) 
+    </script>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

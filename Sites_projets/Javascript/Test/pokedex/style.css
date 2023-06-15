@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  }
+  
+  #wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    width: 60%;
+    max-width: 500px;
+  
+  }
+
+
+#button {
+    background-color: #ff7a22;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+

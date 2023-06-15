@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test</h1>
+    
+    <div>
+        <label for=""> Saisir la factorielle voulue :</label>
+        <input type="number" id="factorielle"/>
+        <button class="btn">Valider</button>
+        <div id="resultat"></div>
+    </div>
+
+<script>
+
+   
+    const inputFactorielle = document.querySelector("#factorielle");
+    // console.log(inputFactorielle);
+    const btn = document.querySelector(".btn");
+    const divResultat = document.querySelector("#resultat");
+
+    btn.addEventListener("click",function(){
+
+        let nombre = inputFactorielle.value ;
+        let fact = 1;
+
+        for(let i=1; i <=nombre; i++){
+        fact = fact * i ; 
+    }
+
+    divResultat.innerHTML = "Factorielle : " + nombre + " = " + fact ;
+    });
+
+</script>
+    <h2>Périmètre/Aire</h2>
+    <div>
+        <label for=""> Saisir le rayon :</label>
+        <input type="number" id="rayon"/>
+        <div>
+            <input type="checkbox" id="case" >
+            <label for="">Aire</label>
+          </div>
+        <div id="resultataire"></div>
+    </div>
+
+    <script>
+
+    const inputRayon = document.querySelector("#rayon");
+    const box = document.querySelector("#case");
+    const divResultataire = document.querySelector("#resultataire");
+    
+    box.addEventListener("click",function() {
+    
+        if (box.checked){
+
+        let rayon = inputRayon.value ;
+        let pi = Math.PI ;
+
+        let aire = pi * rayon * rayon  ;
+
+    divResultataire.innerHTML = "L'aire est de : " + aire ;
+
+}
+
+else if (box.checked === false) {
+
+        let rayon = inputRayon.value ;
+        let pi = Math.PI;
+
+        let peri =  2 * pi * rayon ;
+
+    divResultataire.innerHTML = "Le périmetre est de : " + peri ;
+}
+    })
+
+    </script>
+
+<h3>Calcul IMC</h3>
+
+<div>
+    <label for=""> Saisir votre poids : </label>
+    <input type="number" id="poids"/>
+    <label for=""> Saisir votre taille en centimètres : </label>
+    <input type="number" id="taille"/>
+    <div>
+        <button class="btnImc">Valider</button>
+        <div id="resultatImc"></div>
+      </div>
+</div>
+
+<script>
+
+    const inputPoids = document.querySelector("#poids");
+    const inputTaille = document.querySelector("#taille");
+
+    const btnImc = document.querySelector(".btnImc");
+    const divResultatImc = document.querySelector("#resultatImc");
+
+    btnImc.addEventListener("click",function(){
+
+    function calculImc(){
+
+    const imc = inputPoids.value / (inputTaille.value * inputTaille.value);
+//    console.log(imc);
+     divResultatImc.innerHTML = "Votre IMC est de " + imc ;
+}
+
+console.log(calculImc()) ;
+
+
+    })
+
+
+</script>
+
+<h4>Tableau</h4>
+
+<div>
+    <label for=""> Saisir un élève : </label>
+    <input type="text" id="eleve"/>
+    <div>
+
+     
+    </div>
+    <div>
+        <button class="btnel">Valider</button>
+        <div id="result"></div>
+    </div>
+</div>
+
+
+<script>
+    const inputEleve = document.querySelector("#eleve");
+    const btnel = document.querySelector(".btnel");
+
+    btnel.addEventListener("click",function(){
+
+
+    })
+
+
+</script>
+
+
+
+</body>
+</html>
