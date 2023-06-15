@@ -1,0 +1,17 @@
+.custom-card {
+    background-color: rgba(248, 249, 250, 0.8);
+
+}
+
+.card {
+    border-radius: 15px; 
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition  à la transformation */
+    
+
+}
+
+.card:hover {
+    transform: translateY(-5%); /* Déplace la carte vers le haut de 15% lorsque la souris passe dessus */
+}
+
+

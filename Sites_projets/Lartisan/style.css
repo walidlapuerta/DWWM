@@ -1,0 +1,147 @@
+/* style.css / */
+
+/* / Réinitialisation des styles par défaut / */
+body,h1,h2,h3,p,ul,li,form,input,textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  color: black;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('images/div1.png');
+  background-size: cover;
+  color: #fff;
+  padding: 40px;
+  height: 300px;
+  margin-left: -5px;
+  margin-right: -0.3vh;
+
+}
+
+footer {
+  background: url('images/div2.png');
+  height: 200px;
+  margin-left: -5px;
+  margin-right: 0.5vh;
+
+}
+
+/* / Section Services / */
+#services {
+  padding: 50px 0;
+  background-color: #444;
+}
+
+/* / Section À Propos / */
+#about {
+  padding: 50px 0;
+}
+
+/* / Section Contact */
+#contact {
+  padding: 50px 0;
+}
+
+
+
+/* Cards et texte */
+.main .content .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  background: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .2s;
+  margin-top: 50px;
+}
+
+.main .content .card:hover {
+  transform: scale(1.02);
+}
+
+.main .content .card .left {
+  flex: 0 0 50%;
+  padding: 20px;
+  padding-right: 50px;
+}
+
+.main .content .card .left h2 {
+  margin: 0 0 10px;
+  color: #444;
+}
+
+.main .content .card .left p {
+  margin: 0;
+  color: #666;
+}
+
+.main .content .card .right {
+  flex: 0 0 50%;
+}
+
+.main .content .card .right img {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+}
+
+/* Pour tablettes */
+@media (min-width: 600px) and (max-width: 767px) {
+  .main .content .card {
+    flex-direction: column;
+  }
+
+  .main .content .card .left,
+  .main .content .card .right {
+    flex: 1;
+    text-align: center;
+  }
+
+  .main .content .card .right img {
+    max-height: none;
+    border-radius: 10px;
+  }
+}
+
+/* Pour téléphones mobiles */
+@media (max-width: 599px) {
+  .main .content .card {
+    flex-direction: column;
+  }
+
+  .main .content .card .left,
+  .main .content .card .right {
+    flex: 1;
+    text-align: center;
+  }
+
+  .main .content .card .right img {
+    max-height: none;
+    border-radius: 10px;
+  }
+}
+
+/* Pour grands écrans */
+@media (min-width: 1200px) {
+  .main .content .card {
+    max-width: 1200px;
+  }
+
+  .main .content .card .right img {
+    height: 400px;
+    width: 600px;
+  }
+}

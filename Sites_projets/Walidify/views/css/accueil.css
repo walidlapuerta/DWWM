@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+ }
+ 
+ .message{
+    border: 7px solid #d33c3c;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    background-color:rgba(6, 7, 7, 0.404); 
+    color: #fff; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+ 

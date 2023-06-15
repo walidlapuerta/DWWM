@@ -1,0 +1,83 @@
+.commentaire {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+    padding: 20px;
+}
+
+.comment p,
+.comment h2 {
+    color: #333;
+}
+
+.comment form {
+    display: none;
+    /* Le formulaire sera caché par défaut */
+    margin-top: 20px;
+}
+
+.comment form input[type="text"],
+.comment form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.comment form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.comment form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.toggle-comment-form {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.toggle-comment-form:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Styles pour les écrans plus petits */
+/* @media (max-width: 768px) {
+    .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+   
+    .comment form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .comment input[type="submit"] {
+        width: 100%;
+    }
+} */

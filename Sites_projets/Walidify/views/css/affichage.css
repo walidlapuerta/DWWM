@@ -1,0 +1,26 @@
+/* Style de base */
+
+body { background-color: red; }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+

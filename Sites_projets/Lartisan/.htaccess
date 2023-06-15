@@ -1,0 +1,10 @@
+#  Permet de procéder à la réécriture de l'URL
+
+RewriteEngine On
+
+
+# Evite d'aller sur le dossier ou fichier (d/f)
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?page=$1

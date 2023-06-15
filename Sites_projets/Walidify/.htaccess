@@ -1,0 +1,12 @@
+#  Permet de procéder à la réécriture de l'URL
+
+RewriteEngine On
+
+
+# Evite d'aller sur le dossier ou fichier (d/f)
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?page=$1
+
+# Lorsque qu'on écrit /accueil dans l'URL, le fichier comprends désormais qu'il s'agit bien de l'URL index.php?page=accueil
